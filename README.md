@@ -84,18 +84,15 @@ bash -c 'printf "#!/bin/bash\n echo \"xxxxxx\"\n" > filter && chmod +x filter &&
 ```
 
 
-
-```
-
-
 ### misc
-forces error message to be in english
+```bash
+#forces error message to be in english
 ```bash
 export LANG=C LC_ALL=C
 ```
 
 ## Misbehaving IP(S):
-`91.92.40.5`
-`91.92.40.7`
-`80.94.92.234`
-`92.118.39.49`
+`91.92.40.5`  
+`91.92.40.7`  
+`80.94.92.234`  
+`92.118.39.49`  
