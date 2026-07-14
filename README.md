@@ -1,4 +1,4 @@
-# honeypot/VM detection proceduces
+# Preliminary probing procedures
 ## Collected from automated linux scanners via cowrie ssh honeypot
 
 ### OS detection
@@ -92,6 +92,14 @@ export LANG=C LC_ALL=C
 ```
 
 ## Offending IP(s):
+```bash
+cat cowrie.json* | jq -r '                
+  select(.eventid == "cowrie.command.input")
+  | select(.input | contains("xxxxx"))     
+  | .src_ip
+' | sort | uniq -c
+```
+
 ```
 54  195.178.110.232
 9   2.57.122.168
